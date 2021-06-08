@@ -7,6 +7,16 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
+    "paths": {
+      "freedom-clear-data": [
+        "dist/freedom-clear-data/freedom-clear-data",
+        "dist/freedom-clear-data"
+      ],
+      "freedom-spinner": [
+        "dist/freedom-spinner/freedom-spinner",
+        "dist/freedom-spinner"
+      ]
+    },
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,

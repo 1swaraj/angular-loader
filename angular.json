@@ -3,5 +3,68 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "freedom-spinner": {
+      "projectType": "library",
+      "root": "projects/freedom-spinner",
+      "sourceRoot": "projects/freedom-spinner/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/freedom-spinner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/freedom-spinner/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/freedom-spinner/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/freedom-spinner/src/test.ts",
+            "tsConfig": "projects/freedom-spinner/tsconfig.spec.json",
+            "karmaConfig": "projects/freedom-spinner/karma.conf.js"
+          }
+        }
+      }
+    },
+    "freedom-clear-data": {
+      "projectType": "library",
+      "root": "projects/freedom-clear-data",
+      "sourceRoot": "projects/freedom-clear-data/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/freedom-clear-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/freedom-clear-data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/freedom-clear-data/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/freedom-clear-data/src/test.ts",
+            "tsConfig": "projects/freedom-clear-data/tsconfig.spec.json",
+            "karmaConfig": "projects/freedom-clear-data/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "freedom-spinner"
 }
